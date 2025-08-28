@@ -139,17 +139,58 @@
 // let arr = [1, 2, 3, 4];
 // console.log(sum(arr));
 
-let arr = [1, 2, 3, 4];
+// ==================================================================================
 
-function pre(arr) {
-  let n = arr.length;
-  let value = new Array(n).fill(1);
+// ## MaxiMum SubArray
 
-  let pre = 1,
-    post = 1;
+// let arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 
-  for (let i = 0; i < n; i++) {
-    value[i] = pre;
-    pre = arr[i] * pre;
-  }
-}
+// function maxSubArray(arr) {
+//   let n = arr.length;
+
+//   let sum = 0;
+//   let max_value = arr[0];
+
+//   for (let i = 0; i < n; i++) {
+//     if (sum < 0) {
+//       sum = 0;
+//     }
+
+//     sum += arr[i];
+//     if (max_value < sum) {
+//       max_value = sum;
+//     }
+//   }
+
+//   return max_value;
+// }
+
+// console.log(maxSubArray(arr));
+
+// ======================================================================================
+// ##  Find minimum rotated sorted array
+
+// function findMin(arr) {
+//   let s = 0;
+//   let e = arr.length - 1;
+//   let ans = arr[0];
+
+//   while (s <= e) {
+//     if (arr[s] < arr[e]) {
+//       ans = Math.min(ans, arr[s]);
+//     }
+
+//     let mid = Math.floor((s + e) / 2);
+//     ans = Math.min(ans, arr[mid]);
+//     if (arr[s] <= arr[mid]) {
+//       s = mid + 1;
+//     } else {
+//       e = mid - 1;
+//     }
+//   }
+
+//   return ans;
+// }
+
+// let arr = [4, 5, 1, 2, 3];
+// console.log(findMin(arr));
