@@ -1,4 +1,4 @@
-let arr = [5, 3, 1, -2, 0, -5, 8, -3];
+let arr = [2, 3, -2, 4];
 
 function productOfSubArray(arr) {
   let n = arr.length;
